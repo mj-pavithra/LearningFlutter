@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shasthra/home.dart';
+import 'package:shasthra/banner.dart';
 
     void main (){
       runApp(MaterialApp(
@@ -9,6 +10,7 @@ import 'package:shasthra/home.dart';
 
 class SandBox extends StatelessWidget{
   const SandBox ({super.key});
+
 
   @override
   Widget build(BuildContext context){
@@ -27,31 +29,20 @@ class SandBox extends StatelessWidget{
             color: Colors.blueGrey[200],
             child:  Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                 Container(
-                   width: 80,
-                    color: Colors.white,
-                    alignment: Alignment.center,
-                    child: const Text("Maths 2024 ",style:TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-
-                    )
-                    ),
-
-                 ),
+              Text("Maths 2024"),
                 Container(
                   width: 80,
                   color: Colors.white,
                   alignment: Alignment.center,
-                  child: const Text("Maths 2024 ", ),
+                  child: const Text("Maths 2025 ", ),
                 ),
                 Container(
                   width: 80,
                   color: Colors.white,
                   alignment: Alignment.center,
-                  child: const Text("Maths 2024 ", ),
+                  child: const Text("Maths 2025 ", ),
                 ),
               ],
             )
@@ -60,15 +51,20 @@ class SandBox extends StatelessWidget{
             width:  300,
             height: 200,
             color: Colors.blue[200],
-            child: const Text("Pay for class",),
+            child: const Banners(),
           ),
-          Container(
-            width: 400,
-            height: 200,
-            color: Colors.blueAccent[200],
-          ),
+          Expanded(child: 
+            Image.asset('assets/img/maths_bg.jpeg',
+              fit: BoxFit.fitHeight,
+              alignment: Alignment.bottomCenter,
+            ),
+          )
+          
         ],
       ),
     );
   }
 }
+
+
+
